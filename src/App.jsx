@@ -67,6 +67,8 @@ function App() {
 
     return (
         <div className="app">
+            <h3 className={`title ${response ? 'animate-title' : ''}`}>RandomGPT!!</h3>
+            <div className={`c1 ${response ? 'animate-search-bar' : ''}`}>
                 <input
                     type="text"
                     placeholder="Ask me anything..."
@@ -77,6 +79,10 @@ function App() {
                 />
                 <button className="send-button" onClick={handleSend}>&#10145;</button>
             </div>
+            <h1 className={`heading ${response ? 'animate-heading' : ''}`}>
+                {response || "What can I help with?"}
+            </h1>
+        </div>
     );
 }
 
